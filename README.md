@@ -1,0 +1,2 @@
+# LintRuleCustom
+custom rule demo
