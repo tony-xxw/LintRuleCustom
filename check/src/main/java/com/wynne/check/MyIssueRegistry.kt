@@ -9,6 +9,7 @@ class MyIssueRegistry :IssueRegistry() {
         get() = mutableListOf<Issue>().apply {
             add(FixOrientationTransDetector.ISSUE)
             add(ParseColorDetector.ISSUE)
+            add(LogUtilsDetector.ISSUE)
         }
 
     override val api: Int

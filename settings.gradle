@@ -2,4 +2,3 @@
 rootProject.name = "LintRuleCustom"
 include ':app'
 include ':check'
-//include ':lib'

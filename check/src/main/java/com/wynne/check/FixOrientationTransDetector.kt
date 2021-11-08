@@ -21,7 +21,6 @@ class FixOrientationTransDetector : Detector(), XmlScanner {
 
     private val mThemeMap = mutableMapOf<ElementEntity, String>()
 
-
     override fun getApplicableElements(): Collection<String> {
         return listOf(SdkConstants.TAG_ACTIVITY, SdkConstants.TAG_STYLE)
     }
