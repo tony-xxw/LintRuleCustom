@@ -1,0 +1,32 @@
+plugins {
+    id 'java-gradle-plugin'
+    id 'kotlin'
+    id 'maven-publish'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', includes: ['*.jar'])
+    compileOnly "com.android.tools.build:gradle:3.5.3"
+    compileOnly "com.android.tools.lint:lint-gradle:26.5.3"
+    compileOnly "com.android.tools.lint:lint-api:26.5.3"
+}
+
+gradlePlugin {
+    plugins {
+        lintPlugin {
+            id = "com.gaoding.plugin.lint"
+            implementationClass = 'com.gaoding.plugin.lint.LintPlugin'
+        }
+    }
+}
+
+publishing {
+    publications {
+        lint(MavenPublication) {
+            groupId = 'com.gaoding.plugin'
+            artifactId = 'lint'
+            version = '0.0.1'
+            from components.kotlin
+        }
+    }
+}

@@ -3,11 +3,14 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        maven { url('/Users/xiangxianwen/.m2/repository')}
+
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.0.1"
         classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21'
         classpath "com.android.tools.lint:lint:26.3.2"
+        classpath "com.gaoding.plugin:lint:0.0.1"
 
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -19,6 +22,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        maven { url('/Users/xiangxianwen/.m2/repository')}
     }
 
 }
